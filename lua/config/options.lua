@@ -38,7 +38,7 @@ opt.wildmenu = true   -- make tab completion for files/buffers act like bash
 -- ui
 opt.cursorline = true -- highlight the current line
 opt.laststatus = 2    -- only the last window will always have a status line
-opt.lazyredraw = true -- don"t update the display while executing macros
+opt.lazyredraw = false -- don"t update the display while executing macros
 opt.list = true
 
 -- You can also add "space" or "eol", but I feel it"s quite annoying

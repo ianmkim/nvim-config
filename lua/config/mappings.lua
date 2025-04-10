@@ -6,7 +6,6 @@ map("n", "<leader>w", ":w<CR>", {})
 -- NvimTree
 map("n", "<leader>e", ":NvimTreeToggle<CR>", { desc = "Toggle NvimTree sidebar" })    -- open/close
 map("n", "<leader>er", ":NvimTreeRefresh<CR>", { desc = "Refresh NvimTree" })         -- refresh
-map("n", "<leader>ef", ":NvimTreeFindFile<CR>", { desc = "Search file in NvimTree" }) -- search file
 
 -- fzf
 map("n", "<leader>ff", ":FzfLua files<CR>", { desc = "Fzf files" })
@@ -24,3 +23,9 @@ map("n", "<C-l>", "<C-w>l", { noremap = true, silent = true })
 -- faster splits
 map("n", "<leader>ss", ":split<CR>")
 map("n", "<leader>sl", ":vsplit<CR>")
+
+-- gitlab reviews and whatnot
+map("n", "<leader>mr", function() require("gitlab").choose_merge_request() end, { desc = "Choose Merge Request" })
+map("n", "<leader>rmr", function() require("gitlab").review() end, { desc = "Review Merge Request" })
+map("n", "<leader>glc", function() require("gitlab").create_comment() end, { desc = "Review Merge Request" })
+

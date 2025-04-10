@@ -23,10 +23,9 @@ lspconfig.rust_analyzer.setup({
   },
 })
 
--- Python LSP (pyright)
-lspconfig.pyright.setup({
+lspconfig.jedi_language_server.setup{
   on_attach = on_attach,
-})
+}
 
 -- C++ LSP (clangd)
 lspconfig.clangd.setup({
